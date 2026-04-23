@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Matrícula - Escola Virtual</title>
+    <link rel="stylesheet" href="/tarefa2204/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Escola Virtual</h1>
+        <h2>Formulário de Pré-Matrícula</h2>
+
+        <form action="#" method="post">
+            <!-- Seção: Dados Pessoais -->
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <div class="grid-pessoais">
+                    <label for="nome">Nome do Aluno:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="nascimento">Nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+
+                    <label for="mae">Nome da Mãe:</label>
+                    <input type="text" id="mae" name="mae">
+
+                    <label for="pai">Nome do Pai:</label>
+                    <input type="text" id="pai" name="pai">
+
+                    <label for="tel">Telefone:</label>
+                    <div class="telefone-group">
+                        <span>DDD (</span>
+                        <input type="text" name="ddd" size="2" maxlength="1">
+                        <span>) Tel:</span>
+                        <input type="tel" name="tel" size="25" maxlength="9">
+                    </div>
+
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </fieldset>
+
+            <!-- Seção: Informações de Matrícula -->
+            <fieldset>
+                <legend>Informações de Matrícula:</legend>
+                <div class="grid-matricula">
+                    <div class="coluna">
+                        <label for="serie">Série:</label>
+                        <select id="serie" name="serie">
+                            <option value="pre-escolar">pré-escolar</option>
+                            <option value="1-ano">1º Ano</option>
+                            <option value="2-ano">2º Ano</option>
+                            <option value="3-ano">3º Ano</option>
+                            <option value="4-ano">4º Ano</option>
+                            <option value="5-ano">5º Ano</option>
+                            <option value="6-ano">6º Ano</option>
+                            <option value="7-ano">7º Ano</option>
+                            <option value="8-ano">8º Ano</option>
+                            <option value="9-ano">9º Ano</option>
+                        </select>
+                    </div>
+
+                    <div class="coluna">
+                        <label>Turno:</label>
+                        <label><input type="radio" name="turno" value="manha"> Manhã</label>
+                        <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                    </div>
+
+                    <div class="coluna">
+                        <label>Atividades Extracurriculares:</label>
+                        <div class="atividades-list">
+                            <label><input type="checkbox" name="act" value="informatica"> Informática</label>
+                            <label><input type="checkbox" name="act" value="musica"> Música</label>
+                            <label><input type="checkbox" name="act" value="balet"> Balet</label>
+                            <label><input type="checkbox" name="act" value="pintura"> Pintura</label>
+                            <label><input type="checkbox" name="act" value="judo"> Judô</label>
+                            <label><input type="checkbox" name="act" value="futebol"> Futebol</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="btn-group">
+                <button type="submit">Envia Formulário</button>
+                <button type="reset">Limpa Campos</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

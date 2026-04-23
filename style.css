@@ -1,0 +1,135 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            border: 2px solid #ccc;
+            padding: 20px;
+            width: 600px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        fieldset {
+            border: 1px solid #aaa;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+
+        /* Layout Grid para os Dados Pessoais */
+        .grid-pessoais {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .grid-pessoais label {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        /* Ajuste específico para a linha do telefone */
+        .telefone-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Layout Grid para Informações de Matrícula */
+        .grid-matricula {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .coluna {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .atividades-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="email"], select {
+            padding: 3px;
+            border: 1px solid #777;
+        }
+
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+        /*separçõao para a página inicial*/
+        /* Estilos para a página inicial */
+        /* CSS Simples para deixar a página inicial bonita */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Faz a página ocupar a altura total da tela */
+            text-align: center;
+        }
+
+        .home-card {
+            background-color: pink;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .btn-formulario {
+            background-color: #007bff;
+            color: pink;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-formulario:hover {
+            background-color: #0056b3;
+        }
