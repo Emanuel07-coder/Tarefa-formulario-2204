@@ -1,96 +1,292 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pré-Matrícula - Escola Virtual</title>
-    <link rel="stylesheet" href="/tarefa2204/style.css">
+    <title>Cadastro - Criar Conta</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+    <div class="form-container">
+        <!-- Hero Section -->
+        <div class="form-hero">
+            <div class="form-hero__icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <h1 class="form-hero__title">Crie Sua Conta</h1>
+            <p class="form-hero__subtitle">Junte-se a milhares de usuários satisfeitos</p>
+        </div>
 
-    <div class="container">
-        <h1>Escola Virtual</h1>
-        <h2>Formulário de Pré-Matrícula</h2>
+        <!-- Progress Indicator -->
+        <div class="progress-bar">
+            <div class="progress-bar__steps">
+                <div class="progress-bar__step active">1</div>
+                <div class="progress-bar__step">2</div>
+                <div class="progress-bar__step">3</div>
+            </div>
+        </div>
 
-        <form action="#" method="post">
-            <!-- Seção: Dados Pessoais -->
-            <fieldset>
-                <legend>Dados Pessoais:</legend>
-                <div class="grid-pessoais">
-                    <label for="nome">Nome do Aluno:</label>
-                    <input type="text" id="nome" name="nome" required>
-
-                    <label for="nascimento">Nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
-
-                    <label for="mae">Nome da Mãe:</label>
-                    <input type="text" id="mae" name="mae">
-
-                    <label for="pai">Nome do Pai:</label>
-                    <input type="text" id="pai" name="pai">
-
-                    <label for="tel">Telefone:</label>
-                    <div class="telefone-group">
-                        <span>DDD (</span>
-                        <input type="text" name="ddd" size="2" maxlength="1">
-                        <span>) Tel:</span>
-                        <input type="tel" name="tel" size="25" maxlength="9">
-                    </div>
-
-                    <label for="email">E-Mail:</label>
-                    <input type="email" id="email" name="email" required>
+        <!-- Form Body -->
+        <form class="form-body" action="recebedados.html" method="get">
+            
+            <!-- Nome Field -->
+            <div class="form-group">
+                <label class="form-group__label" for="nome">
+                    <i class="fa-solid fa-user form-group__label-icon"></i>
+                    Nome Completo
+                </label>
+                <div class="form-group__input-wrapper">
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        class="form-group__input" 
+                        placeholder="João Silva" 
+                        required
+                        autocomplete="name"
+                    >
+                    <i class="fa-solid fa-user form-group__input-icon"></i>
                 </div>
-            </fieldset>
+                <span class="form-group__hint">Digite seu nome completo conforme documentos</span>
+            </div>
 
-            <!-- Seção: Informações de Matrícula -->
-            <fieldset>
-                <legend>Informações de Matrícula:</legend>
-                <div class="grid-matricula">
-                    <div class="coluna">
-                        <label for="serie">Série:</label>
-                        <select id="serie" name="serie">
-                            <option value="pre-escolar">pré-escolar</option>
-                            <option value="1-ano">1º Ano</option>
-                            <option value="2-ano">2º Ano</option>
-                            <option value="3-ano">3º Ano</option>
-                            <option value="4-ano">4º Ano</option>
-                            <option value="5-ano">5º Ano</option>
-                            <option value="6-ano">6º Ano</option>
-                            <option value="7-ano">7º Ano</option>
-                            <option value="8-ano">8º Ano</option>
-                            <option value="9-ano">9º Ano</option>
-                        </select>
-                    </div>
-
-                    <div class="coluna">
-                        <label>Turno:</label>
-                        <label><input type="radio" name="turno" value="manha"> Manhã</label>
-                        <label><input type="radio" name="turno" value="tarde"> Tarde</label>
-                    </div>
-
-                    <div class="coluna">
-                        <label>Atividades Extracurriculares:</label>
-                        <div class="atividades-list">
-                            <label><input type="checkbox" name="act" value="informatica"> Informática</label>
-                            <label><input type="checkbox" name="act" value="musica"> Música</label>
-                            <label><input type="checkbox" name="act" value="balet"> Balet</label>
-                            <label><input type="checkbox" name="act" value="pintura"> Pintura</label>
-                            <label><input type="checkbox" name="act" value="judo"> Judô</label>
-                            <label><input type="checkbox" name="act" value="futebol"> Futebol</label>
-                        </div>
-                    </div>
+            <!-- Email Field -->
+            <div class="form-group">
+                <label class="form-group__label" for="email">
+                    <i class="fa-regular fa-envelope form-group__label-icon"></i>
+                    Endereço de Email
+                </label>
+                <div class="form-group__input-wrapper">
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-group__input" 
+                        placeholder="joao@example.com" 
+                        required
+                        autocomplete="email"
+                    >
+                    <i class="fa-regular fa-envelope form-group__input-icon"></i>
                 </div>
-            </fieldset>
+                <span class="form-group__hint">Enviaremos confirmações para este email</span>
+            </div>
 
+            <!-- Idade Field -->
+            <div class="form-group">
+                <label class="form-group__label" for="idade">
+                    <i class="fa-solid fa-cake-candles form-group__label-icon"></i>
+                    Idade
+                </label>
+                <div class="form-group__input-wrapper">
+                    <input 
+                        type="number" 
+                        id="idade" 
+                        name="idade" 
+                        class="form-group__input" 
+                        placeholder="25" 
+                        min="18" 
+                        max="120" 
+                        required
+                        autocomplete="age"
+                    >
+                    <i class="fa-solid fa-cake-candles form-group__input-icon"></i>
+                </div>
+                <span class="form-group__hint">Você deve ter pelo menos 18 anos</span>
+            </div>
+
+            <!-- Senha Field -->
+            <div class="form-group">
+                <label class="form-group__label" for="senha">
+                    <i class="fa-solid fa-lock form-group__label-icon"></i>
+                    Senha
+                </label>
+                <div class="form-group__input-wrapper">
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        class="form-group__input" 
+                        placeholder="••••••••" 
+                        required
+                        autocomplete="new-password"
+                    >
+                    <i class="fa-solid fa-lock form-group__input-icon"></i>
+                    <!-- BOTÃO ADICIONADO AQUI -->
+                    <button type="button" class="toggle-password" data-target="senha">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+                <span class="form-group__hint">Mínimo 8 caracteres com letras e números</span>
+                
+                <!-- Password Strength -->
+                <div class="password-strength">
+                    <div class="password-strength__bar">
+                        <div class="password-strength__progress" id="strengthBar"></div>
+                    </div>
+                    <span class="password-strength__text" id="strengthText"></span>
+                </div>
+            </div>
+
+            <!-- Confirmar Senha Field -->
+            <div class="form-group">
+                <label class="form-group__label" for="confirmarSenha">
+                    <i class="fa-solid fa-lock-open form-group__label-icon"></i>
+                    Confirmar Senha
+                </label>
+                <div class="form-group__input-wrapper">
+                    <input 
+                        type="password" 
+                        id="confirmarSenha" 
+                        name="confirmarSenha" 
+                        class="form-group__input" 
+                        placeholder="••••••••" 
+                        required
+                        autocomplete="new-password"
+                    >
+                    <i class="fa-solid fa-lock-open form-group__input-icon"></i>
+                    <!-- BOTÃO ADICIONADO AQUI -->
+                    <button type="button" class="toggle-password" data-target="confirmarSenha">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+                <span class="form-group__error" id="senhaError" style="display: none;">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    As senhas não conferem
+                </span>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <label class="checkbox-group" for="termos">
+                <input 
+                    type="checkbox" 
+                    id="termos" 
+                    class="checkbox-group__input" 
+                    required
+                >
+                <div class="checkbox-group__content">
+                    <span class="checkbox-group__text">
+                        Eu li e aceito os 
+                        <a href="#" class="checkbox-group__link">Termos de Uso</a>
+                        e a 
+                        <a href="#" class="checkbox-group__link">Política de Privacidade</a>
+                    </span>
+                </div>
+            </label>
+
+            <!-- Button Group -->
             <div class="btn-group">
-                <button type="submit">Envia Formulário</button>
-                <button type="reset">Limpa Campos</button>
+                <button type="reset" class="btn btn--secondary">
+                    <i class="fa-solid fa-rotate-left btn--icon"></i>
+                    Limpar Campos
+                </button>
+                <button type="submit" class="btn btn--primary" id="submitBtn">
+                    <i class="fa-solid fa-arrow-right btn--icon"></i>
+                    Criar Conta
+                </button>
             </div>
         </form>
+
+        <!-- Trust Elements -->
+        <div class="trust-elements">
+            <div class="trust-element">
+                <i class="fa-solid fa-shield-halved trust-element__icon"></i>
+                <span>Dados Criptografados</span>
+            </div>
+            <div class="trust-element">
+                <i class="fa-solid fa-lock trust-element__icon"></i>
+                <span>Segurança SSL</span>
+            </div>
+            <div class="trust-element">
+                <i class="fa-solid fa-hand-holding-heart trust-element__icon"></i>
+                <span>Privacidade Garantida</span>
+            </div>
+        </div>
     </div>
 
-</body>
+    <script>
+        // Password Strength Indicator
+        const senhaInput = document.getElementById('senha');
+        const strengthBar = document.getElementById('strengthBar');
+        const strengthText = document.getElementById('strengthText');
 
+        senhaInput.addEventListener('input', function() {
+            const value = this.value;
+            let strength = 0;
+            
+            if (value.length >= 8) strength += 1;
+            if (/[A-Z]/.test(value)) strength += 1;
+            if (/[0-9]/.test(value)) strength += 1;
+            if (/[^A-Za-z0-9]/.test(value)) strength += 1;
+
+            strengthBar.className = 'password-strength__progress';
+            strengthText.className = 'password-strength__text';
+
+            if (strength === 0) {
+                strengthBar.style.width = '0%';
+                strengthText.textContent = '';
+            } else if (strength <= 2) {
+                strengthBar.classList.add('weak');
+                strengthText.classList.add('weak');
+                strengthText.textContent = 'Senha fraca';
+            } else if (strength === 3) {
+                strengthBar.classList.add('medium');
+                strengthText.classList.add('medium');
+                strengthText.textContent = 'Senha média';
+            } else {
+                strengthBar.classList.add('strong');
+                strengthText.classList.add('strong');
+                strengthText.textContent = 'Senha forte';
+            }
+        });
+
+        // Password Match Validation
+        const confirmarSenhaInput = document.getElementById('confirmarSenha');
+        const senhaError = document.getElementById('senhaError');
+        const submitBtn = document.getElementById('submitBtn');
+
+        confirmarSenhaInput.addEventListener('input', function() {
+            if (this.value !== senhaInput.value && this.value.length > 0) {
+                senhaError.style.display = 'flex';
+                submitBtn.disabled = true;
+            } else {
+                senhaError.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Form submission animation
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin btn--icon"></i> Criando...';
+            submitBtn.disabled = true;
+        });
+
+        // Lógica para Alternar Visibilidade da Senha
+        const toggleButtons = document.querySelectorAll('.toggle-password');
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const passwordInput = document.getElementById(targetId);
+                const icon = this.querySelector('i');
+
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
