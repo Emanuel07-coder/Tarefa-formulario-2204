@@ -3,70 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Escola Virtual</title>
-    <style>
-        /* CSS Simples para deixar a página bonita */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Faz a página ocupar a altura total da tela */
-            text-align: center;
-        }
-
-        .home-card {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-        .btn-formulario {
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            padding: 15px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .btn-formulario:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Cadastro Concluído - Sucesso!</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="success-container">
+        <!-- Success Icon -->
+        <div class="success-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
 
-    <div class="home-card">
-        <h1>Bem-vindo à Escola Virtual</h1>
-        <p>
-            Seja bem-vindo ao nosso portal de matrículas. <br> 
-            Para iniciar o processo de inscrição do aluno, por favor, clique no botão abaixo.
-        </p>
-        
-        <!-- Link para a página do formulário que criamos -->
-        <a href="formulario.html" class="btn-formulario">
-            Acessar Formulário de Pré-Matrícula
-        </a>
+        <!-- Success Title -->
+        <h1 class="success-title">Cadastro Concluído!</h1>
+        <p class="success-subtitle">Sua conta foi criada com sucesso. Bem-vindo(a) à nossa plataforma!</p>
+
+        <!-- User Data Display -->
+        <div class="success-data">
+            <div class="success-data__item">
+                <span class="success-data__label">Nome</span>
+                <span class="success-data__value" id="displayNome">-</span>
+            </div>
+            <div class="success-data__item">
+                <span class="success-data__label">Email</span>
+                <span class="success-data__value" id="displayEmail">-</span>
+            </div>
+            <div class="success-data__item">
+                <span class="success-data__label">Idade</span>
+                <span class="success-data__value" id="displayIdade">-</span>
+            </div>
+            <div class="success-data__item">
+                <span class="success-data__label">Data do Cadastro</span>
+                <span class="success-data__value" id="displayData">-</span>
+            </div>
+        </div>
+
+        <!-- Success Actions -->
+        <div class="success-actions">
+            <a href="exemplo01.html" class="btn btn--secondary">
+                <i class="fa-solid fa-arrow-left btn--icon"></i>
+                Voltar
+            </a>
+            <a href="#" class="btn btn--primary">
+                <i class="fa-solid fa-house btn--icon"></i>
+                Ir para Home
+            </a>
+        </div>
     </div>
 
+    <!-- JavaScript to display form data -->
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Display the submitted data
+        const nome = urlParams.get('nome');
+        const email = urlParams.get('email');
+        const idade = urlParams.get('idade');
+        
+        if (nome) document.getElementById('displayNome').textContent = nome;
+        if (email) document.getElementById('displayEmail').textContent = email;
+        if (idade) document.getElementById('displayIdade').textContent = idade + ' anos';
+        
+        // Set current date
+        const hoje = new Date();
+        const dataFormatada = hoje.toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        });
+        document.getElementById('displayData').textContent = dataFormatada;
+    </script>
 </body>
 </html>
+
